@@ -1,0 +1,63 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header bg-warning text-dark text-center">
+          <h4 class="mb-0">{{prodcutId == "0" ? "Add Product":"Edit Product"}}</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="productForm" (submit)="handleSubmit($event)">
+            <div class="mb-3">
+              <label for="name" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="name" name="name" formControlName="name"
+                placeholder="Enter product name">
+            </div>
+            @if(getName.touched){ @if(getName.hasError('required')){
+            <div id="emailHelp" class="text-danger form-text">
+              Product Name is Required
+            </div>
+            } @if(getName.hasError('minlength')){
+            <div id="emailHelp" class="text-danger form-text">
+              Product Name length must be greater than 3
+            </div>
+            } }
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="description" name="description" rows="3" formControlName="description"
+                placeholder="Enter product description"></textarea>
+            </div>
+            @if(description.touched){ @if(description.hasError('required')){
+            <div id="emailHelp" class="text-danger form-text">
+              Product description is Required
+            </div>
+            } 
+            }
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="number" class="form-control" id="price" name="price" formControlName="price"
+                placeholder="Enter product price">
+            </div>
+            @if(getPrice.touched){ @if(getPrice.hasError('required')){
+            <div id="emailHelp" class="text-danger form-text">
+              Product Price is Required
+            </div>
+            }}
+            <div class="mb-3">
+              <label for="imageUrl" class="form-label">Image URL</label>
+              <input type="text" class="form-control" id="imageUrl" name="imageUrl" formControlName="imageUrl"
+                placeholder="Enter image URL">
+            </div>
+            @if(getImageURl.touched){ @if(getImageURl.hasError('required')){
+            <div id="emailHelp" class="text-danger form-text">
+              Product imageUrl is Required
+            </div>
+            }}
+            <button type="submit" class="btn btn-warning w-100">
+              {{prodcutId == "0" ? "Add product":"Update Product"}}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

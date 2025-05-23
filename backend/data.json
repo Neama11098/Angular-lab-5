@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ali"
+    },
+    {
+      "id": "2",
+      "name": "Mona"
+    }
+  ],
+  "products": [],
+  "students": [
+    {
+      "id": "1",
+      "name": "Alaa",
+      "school": "Elhoda"
+    }
+  ]
+}

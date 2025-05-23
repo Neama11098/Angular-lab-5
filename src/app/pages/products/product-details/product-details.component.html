@@ -1,0 +1,9 @@
+<div class="card mb-4" style="max-width: 400px; margin: 0 auto;">
+  <img [src]="product?.imageUrl" class="card-img-top img-fluid" [alt]="product?.name" style="max-width: 200px; max-height: 200px; object-fit: cover; margin: 20px auto; display: block;">
+  <div class="card-body">
+    <h5 class="card-title">{{ product?.name }}</h5>
+    <p class="card-text">{{ product?.description }}</p>
+    <h6 class="card-subtitle mb-2 text-muted">${{ product?.price }}</h6>
+    <button class="btn btn-primary">Add to Cart</button>
+  </div>
+</div>
